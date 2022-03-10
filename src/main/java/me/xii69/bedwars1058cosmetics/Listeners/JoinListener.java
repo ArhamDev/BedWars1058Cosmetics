@@ -8,18 +8,13 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 public class JoinListener implements Listener {
-
-    private final int slot = Utils.getInt("on-join-items.slot") - 1;
+    private static final int slot = Utils.getInt("on-join-items.slot") - 1;
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
-
-        Player player = event.getPlayer();
-
         if (Utils.getBoolean("on-join-items.enabled")) {
-            player.getInventory().setItem(slot, Items.menuItem);
+            event.getPlayer().getInventory().setItem(slot, Items.menuItem);
         }
-
     }
 
 }
