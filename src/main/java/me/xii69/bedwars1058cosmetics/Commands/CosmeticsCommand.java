@@ -15,11 +15,7 @@ public class CosmeticsCommand implements CommandExecutor {
 
         Player player = (Player) sender;
 
-        if (args.length == 1) {
-            if (args[0].equalsIgnoreCase("test")) {
-                GUI.openGUI(player);
-            }
-        }
+        GUI.openMainMenu(player);
 
         if (args.length == 1) {
             if (args[0].equalsIgnoreCase("reload")) {

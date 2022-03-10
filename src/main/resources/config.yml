@@ -13,13 +13,12 @@ on-join-items:
   slot: 5
   # Lore of item, (Color codes are supported)
   lore:
-    - "&bBedWars1058Cosmetics"
     - "&6Right click for cosmetics"
 
 # Cosmetics menu items
 CosmeticsMenu:
   # Title of menu
-  title: "&aBedWars Cosmetics"
+  title: "&aCosmetics"
   # Items
   items:
     # Close item
@@ -32,6 +31,41 @@ CosmeticsMenu:
       # Lore of item, (Color codes are supported)
       lore:
         - "&7Click for close this menu"
+    back:
+      name: "&bBack"
+      item: ARROW
+      lore:
+        - "&7Click for back to previous menu"
+    bedBreakEffects:
+      name: "&bBed Break Effects"
+      item: BED
+      lore:
+        - "&7Click for open bed break effects menu"
+    deathCries:
+      name: "&6Death cries"
+      item: BLAZE_POWDER
+      lore:
+        - "&7Click for open death cries menu"
+
+BedBreakEffectsMenu:
+  title: "&bBed Break Effects"
+  cosmetics:
+    fireworkEffect:
+      enabled: true
+      name: "&bBed Break Effects"
+      item: FIREWORK
+      lore:
+        - "&7Right click for preview of effect"
+
+DeathCriesMenu:
+  title: "&6Death Cries"
+  cosmetics:
+    catCry:
+      enabled: true
+      name: "&bCat Cry"
+      item: BED
+      lore:
+        - "&7Right click for preview of sound"
 
 messages:
   no-permission: "&cYou don't have permission."
