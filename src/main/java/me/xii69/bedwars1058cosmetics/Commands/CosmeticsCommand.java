@@ -12,24 +12,30 @@ public class CosmeticsCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-
-        Player player = (Player) sender;
-
-        GUI.openMainMenu(player);
-
         if (args.length == 1) {
-            if (args[0].equalsIgnoreCase("reload")) {
-                if (player.hasPermission("bedwars1058cosmetics.reload")) {
-                    Main.getInstance().reloadConfig();
-                    player.sendMessage(Utils.getColorizedConfig("messages.reload"));
-                } else {
-                    player.sendMessage(Utils.getColorizedConfig("messages.no-permission"));
-                }
-            }
+            sender.sendMessage(Utils.getColorizedConfig("messages.not-enough-arguments"));
+            return false;
         }
-
-        return false;
-
+        switch (args[0]) {
+            case "reload":
+                if (sender.hasPermission("bedwars1058cosmetics.reload")) {
+                    Main.getInstance().reloadConfig();
+                    sender.sendMessage(Utils.getColorizedConfig("messages.reload"));
+                }
+                break;
+            case "menu":
+                if (sender instanceof Player) {
+                    GUI.openMainMenu((Player) sender);
+                } else {
+                    sender.sendMessage(Utils.getColorizedConfig("messages.invalid-executor"));
+                    return false;
+                }
+                break;
+            default:
+                sender.sendMessage(Utils.getColorizedConfig("messages.unknown-argument"));
+                break;
+        }
+        return true;
     }
 
 }
