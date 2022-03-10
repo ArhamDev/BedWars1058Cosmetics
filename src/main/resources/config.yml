@@ -69,4 +69,7 @@ DeathCriesMenu:
 
 messages:
   no-permission: "&cYou don't have permission."
+  not-enough-arguments: "&cPlease enter a valid argument."
+  unknown-argument: "&cUnknown argument."
+  invalid-executor: "&cThis command can only be executed by a player."
   reload: "&bBedWars1058Cosmetics &6has been reloaded."
