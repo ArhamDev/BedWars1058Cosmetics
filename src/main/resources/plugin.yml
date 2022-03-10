@@ -1,0 +1,11 @@
+name: BedWars1058Cosmetics
+version: 1.0.0
+main: me.xii69.bedwars1058cosmetics.Main
+author: xii69
+softdepend: [ BedWars1058 ]
+description: BedWars1058Cosmetics
+commands:
+  bwc:
+  cosmetics:
+  bwcosmetics:
+  bedwars1058cosmetics:

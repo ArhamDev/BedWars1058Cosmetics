@@ -1,0 +1,38 @@
+# BedWars1058Cosmetics v1.0.0
+
+# Gives player cosmetics item on join
+on-join-items:
+  # Enabled?
+  enabled: true
+  # Name of item (Color codes are supported)
+  name: "&6Cosmetics &7(Right click)"
+  # Item type (Requires Material name, press F3 + H and hover your mouse on a item for Material name)
+  # Examples : CHEST, COMPASS, NETHER_STAR and ...
+  item: CHEST
+  # Item slot in hand, from 1 (first item from left) to 9 (last item at end)
+  slot: 5
+  # Lore of item, (Color codes are supported)
+  lore:
+    - "&bBedWars1058Cosmetics"
+    - "&6Right click for cosmetics"
+
+# Cosmetics menu items
+CosmeticsMenu:
+  # Title of menu
+  title: "&aBedWars Cosmetics"
+  # Items
+  items:
+    # Close item
+    close:
+      # Item type (Requires Material name, press F3 + H and hover your mouse on a item for Material name)
+      # Examples : BARRIER, COMPASS, NETHER_STAR and ...
+      name: "&cClose"
+      # Item Material
+      item: BARRIER
+      # Lore of item, (Color codes are supported)
+      lore:
+        - "&7Click for close this menu"
+
+messages:
+  no-permission: "&cYou don't have permission."
+  reload: "&bBedWars1058Cosmetics &6has been reloaded."
